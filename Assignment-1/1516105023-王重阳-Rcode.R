@@ -8,9 +8,9 @@ print(x1)
 x2 <- x[seq(from=2,to=10000,by=4)]
 #exclude the "N"
 x2=sub("N","",x2)
-#String splitting & convert to vector
+#string splitting & vector converting 
 x2 <-unlist(strsplit(x2,""))
-#Count the frequency of each base
+#compute the frequency of each base
 x2 <- table(x2)
 x3 <- round((100*x2/sum(x2)),2)
 x3 <- paste(x3, "%", sep = "")
