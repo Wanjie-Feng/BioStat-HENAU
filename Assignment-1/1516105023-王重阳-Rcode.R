@@ -14,8 +14,6 @@ x2 <-unlist(strsplit(x2,""))
 x2 <- table(x2)
 x3 <- round((100*x2/sum(x2)),2)
 x3 <- paste(x3, "%", sep = "")
-#label the pie chart
-label <- c("A","C","G","T")
-x3 <- paste(label,":",x3,sep="")
 #Draw a pie chart
 pie(x2,labels=x3,col=terrain.colors(length(x2)),main = "wildreams:base pie chart")
+legend("topleft",c("A","C","G","T"),fill=terrain.colors(length(x2) ))
