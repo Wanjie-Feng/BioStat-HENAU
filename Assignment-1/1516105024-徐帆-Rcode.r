@@ -1,4 +1,4 @@
-setwd("E:/Git/homework/BioStat-2018/Assignment-1")#打开文件所在目录
+setwd("E:/git/BioStat-2018/Assignment-1")#打开文件所在目录
 S=length(LN <-readLines("tmp.fastq"))#将文件导入R,逐行读取文件，生成向量或列表，并计算向量长度（或列表中元素个数元素）
 s=S/4#计算碱基序列条数
 c=gsub("N","",LN[seq(from= 2,to= s,by= 4)])#从第二行开始，依次提取碱基序列所在行，步长为4，同时删除字符N
